@@ -49,6 +49,7 @@ def main() -> None:
 	parser.add_argument("--max", type=float, default=100.0, help="Maximum value (inclusive)")
 	parser.add_argument("--seed", type=int, default=None, help="Optional random seed for reproducibility")
 	args = parser.parse_args()
+	
 
 	nums = generate_numbers(args.count, args.type, args.min, args.max, args.seed)
 	total = sum(nums)
@@ -59,7 +60,8 @@ def main() -> None:
 		print([round(x, 4) for x in nums])
 		print(f"Sum: {round(total, 4)}")
 	else:
-		print([int(x) for x in nums])
+	
+		print(f"Sum: {int(total)}")
 		print(f"Sum: {int(total)}")
 
 
